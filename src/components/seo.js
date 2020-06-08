@@ -54,6 +54,8 @@ export default props => {
       <meta property="og:image:width" content={imgw} />
       <meta property="og:image:height" content={imgh} />
       <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="viewport" content="width=640,  user-scalable=yes,"></meta>
     </Helmet>
   )
 }

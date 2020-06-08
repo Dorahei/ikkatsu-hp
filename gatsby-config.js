@@ -31,7 +31,7 @@ module.exports = {
         name: `~炭火焼き~ 一克`,
         short_name: `一克`,
         start_url: `/`,
-        background_color: `#333333`,
+        background_color: `#eee`,
         theme_color: `colar`,
         display: `standalone`,
         icon: `src/images/icon.png`,

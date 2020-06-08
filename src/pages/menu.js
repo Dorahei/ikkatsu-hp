@@ -42,7 +42,7 @@ export default ({ data, location }) => (
           </p>
           <h2>
             <FontAwesomeIcon icon={faCheckSquare} />
-            食べ物
+            お客様の目と胃袋を刺激する串焼きは必見必須！
           </h2>
           <p>
             これらについて、次のような記事やレシピなどを書いて公開しています。

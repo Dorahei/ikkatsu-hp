@@ -86,7 +86,7 @@ export default ({ data }) => (
     <section className="food">
       <div className="container">
         <h2 className="bar">
-          Menu <span>| メニュー</span>
+          Menu <span>| 一克のメニュー</span>
         </h2>
         <div className="details">
           <div className="detail">
@@ -96,7 +96,7 @@ export default ({ data }) => (
             <h3>食べ物</h3>
             <p>FOOD</p>
             <p>
-              おすすめは「とりもも」
+              おすすめは「とりあし」
               <br />
               多種多様な食べ物をお楽しみください。
             </p>
@@ -134,6 +134,37 @@ export default ({ data }) => (
         <Img
           fluid={data.berry.childImageSharp.fluid}
           alt="店内の様子"
+          style={{ height: "100%" }}
+        />
+      </figure>
+    </section>
+    <section className="info">
+      <div className="container">
+        <h2 className="bar">
+          INFO <span>| 一克の情報</span>
+        </h2>
+        <div className="details">
+          <div className="detail">
+            <figure>
+              <Img fluid={data.fruit.childImageSharp.fluid} alt="" />
+            </figure>
+            <h3>食べ物</h3>
+            <p>FOOD</p>
+            <p>
+              おすすめは「とりあし」
+              <br />
+              多種多様な食べ物をお楽しみください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="photo2">
+      <h2 className="sr-only">店内の様子2</h2>
+      <figure>
+        <Img
+          fluid={data.berry.childImageSharp.fluid}
+          alt="店内の様子2"
           style={{ height: "100%" }}
         />
       </figure>

@@ -14,7 +14,7 @@ export default () => {
     query {
       pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
+          fluid(maxWidth: 1920, quality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

@@ -86,7 +86,7 @@ export default ({ data }) => (
     <section className="food">
       <div className="container">
         <h2 className="bar">
-          Menu<span>|一克のメニュー</span>
+          Menu<span>| 一克のメニュー</span>
         </h2>
         <div className="details">
           <div className="detail">
@@ -141,7 +141,7 @@ export default ({ data }) => (
     <section className="info">
       <div className="container">
         <h2 className="bar">
-          INFO<span>|一克の情報</span>
+          INFO<span>| 一克の情報</span>
         </h2>
         <div className="details">
           <div className="detail">
@@ -174,7 +174,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "food_sample5.jpg" }) {
+    hero: file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -205,13 +205,6 @@ export const query = graphql`
     shop: file(relativePath: { eq: "ikkatsu_table.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

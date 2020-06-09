@@ -86,12 +86,12 @@ export default ({ data }) => (
     <section className="food">
       <div className="container">
         <h2 className="bar">
-          Menu <span>| 一克のメニュー</span>
+          Menu<span>|一克のメニュー</span>
         </h2>
         <div className="details">
           <div className="detail">
             <figure>
-              <Img fluid={data.fruit.childImageSharp.fluid} alt="" />
+              <Img fluid={data.food.childImageSharp.fluid} alt="" />
             </figure>
             <h3>食べ物</h3>
             <p>FOOD</p>
@@ -103,7 +103,7 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.beverage.childImageSharp.fluid} alt="" />
+              <Img fluid={data.drink.childImageSharp.fluid} alt="" />
             </figure>
             <h3>飲み物</h3>
             <p>DRINK</p>
@@ -115,7 +115,7 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.grain.childImageSharp.fluid} alt="" />
+              <Img fluid={data.menu.childImageSharp.fluid} alt="" />
             </figure>
             <h3>テイクアウト</h3>
             <p>TAKEOUT</p>
@@ -132,7 +132,7 @@ export default ({ data }) => (
       <h2 className="sr-only">店内の様子</h2>
       <figure>
         <Img
-          fluid={data.berry.childImageSharp.fluid}
+          fluid={data.shop.childImageSharp.fluid}
           alt="店内の様子"
           style={{ height: "100%" }}
         />
@@ -141,12 +141,12 @@ export default ({ data }) => (
     <section className="info">
       <div className="container">
         <h2 className="bar">
-          INFO <span>| 一克の情報</span>
+          INFO<span>|一克の情報</span>
         </h2>
         <div className="details">
           <div className="detail">
             <figure>
-              <Img fluid={data.fruit.childImageSharp.fluid} alt="" />
+              <Img fluid={data.food.childImageSharp.fluid} alt="" />
             </figure>
             <h3>食べ物</h3>
             <p>FOOD</p>
@@ -163,7 +163,7 @@ export default ({ data }) => (
       <h2 className="sr-only">店内の様子2</h2>
       <figure>
         <Img
-          fluid={data.berry.childImageSharp.fluid}
+          fluid={data.shop.childImageSharp.fluid}
           alt="店内の様子2"
           style={{ height: "100%" }}
         />
@@ -181,28 +181,28 @@ export const query = graphql`
         }
       }
     }
-    fruit: file(relativePath: { eq: "food_sample7.jpg" }) {
+    food: file(relativePath: { eq: "food_sample7.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    beverage: file(relativePath: { eq: "drink_sample.jpg" }) {
+    drink: file(relativePath: { eq: "drink_sample.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    grain: file(relativePath: { eq: "ikkatsu_menu5.jpg" }) {
+    menu: file(relativePath: { eq: "ikkatsu_menu5.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    berry: file(relativePath: { eq: "ikkatsu_table.jpg" }) {
+    shop: file(relativePath: { eq: "ikkatsu_table.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp

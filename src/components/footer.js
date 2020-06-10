@@ -12,7 +12,7 @@ import {
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      pattern: file(relativePath: { eq: "pattern.jpg" }) {
+      pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 70) {
             ...GatsbyImageSharpFluid_withWebp

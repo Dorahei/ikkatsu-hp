@@ -4,6 +4,7 @@
 body {
 	font-family: sans-serif;
 	color: #fff;
+	background: linear-gradient(black, darkred)
 }
 
 .container {
@@ -75,7 +76,7 @@ svg {
 	justify-content: center;
 	list-style: none;
 	margin-top: 18px;
-	color: colar;
+	color: coral;
 }
 
 .nav li:not(:last-child) {
@@ -123,7 +124,8 @@ svg {
 	justify-content: center;
 	text-align: center;
 	color: #fff;
-	text-shadow: 0 0 20px rgba(0,0,0,0.2);
+	font-weight: bold;
+	text-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 .hero .catch h1 {
@@ -131,7 +133,7 @@ svg {
 	margin-bottom: 10px;
 }
 .hero .catch p {
-	font-size: 10px;
+	font-size: 15px;
 }
 
 .hero .wave {
@@ -178,7 +180,7 @@ svg {
 }
 
 .food h2 {
-	color: colar;
+	color: coral;
 	margin-bottom: 20px;
 	font-size: 36px;
 }
@@ -202,7 +204,7 @@ svg {
 }
 .detail p:first-of-type {
 	margin-bottom: 30px;
-	color: colar;
+	color: coral;
 	font-size: 19px;
 }
 .detail p:last-of-type {
@@ -311,7 +313,7 @@ svg {
 	color: #ddd;
     background-image: none;
     background-size: cover;
-    background-color: colar;
+    background-color: coral;
 }
 
 .footer .container {
@@ -407,7 +409,7 @@ svg {
 }
 .postbody h2 [class*="fa-"] {
 	margin-right: 15px;
-	color: colar;
+	color: coral;
 }
 
 .postbody p {
@@ -436,27 +438,40 @@ svg {
 	}
 }
 
+/* Linkのボタン風div */
+.link-button{
+	width: 50vw;
+	color: #fff;
+	font-weight: bold;
+	border-radius:24px;
+	background-color: darkred;
+	margin: auto;
+	padding: 12px;
+}
+
 /* コンテンツの情報 */
 .info {
 	margin-bottom: 43px;
-	color: colar;
+	color: coral;
 	font-size: 14px;
 }
 .info [class*="fa-"] {
 	margin-right: 10px;
 }
 
+
 /* shop情報とGoogleMapの表示 */
 .shopdata {
 	display: inline;
-	color: #ddd;
-	background: dimgrey;
+	color: #fff;
+	font-size: large;
+	background: rgba(0,0,0,0.7);
 	margin: 10px auto;
-	padding: 10px;
-	border-radius: 10px 20px 10px 20px;
+	padding: 24px;
+	border-radius: 48px;
 }
 .address-url{
-	padding: 48px;
+	padding: 24px;
 }
 .address-url span{
 	color:#f55 !important;
@@ -464,7 +479,7 @@ svg {
 }
 
 .tel-number{
-	padding: 48px;
+	padding: 24px;
 }
 .tel-number span{
     color:#f55 !important;
@@ -504,7 +519,7 @@ svg {
 .postlink {
 	margin-top: 4em;
 	list-style: none;
-	color: colar;
+	color: coral;
 	font-size: 14px;
 	display: flex;
 }
@@ -592,7 +607,7 @@ svg {
 	width: 7em;
 	padding: 0.5em 1em;
 	border-radius: 1em;
-	background-color: colar;
+	background-color: coral;
 	color: #ddd;
 	font-size: 14px;
 	display: flex;

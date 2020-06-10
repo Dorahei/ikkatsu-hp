@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link} from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -66,8 +66,8 @@ export default ({ data }) => (
               <path d="M6990 604 c0 -16 14 -42 35 -65 37 -41 45 -76 20 -85 -8 -3 -47 10 -87 30 -91 45 -154 49 -164 12 -3 -13 -4 -37 -2 -52 3 -26 8 -30 48 -35 25 -4 67 -14 94 -23 27 -9 77 -16 112 -16 52 0 68 4 91 24 25 22 28 31 28 83 -1 44 -6 66 -23 90 -23 32 -85 63 -127 63 -20 0 -25 -5 -25 -26z m118 -49 c39 -42 45 -102 13 -134 -36 -36 -85 -37 -185 -3 -60 21 -94 28 -102 21 -17 -14 -27 17 -14 42 15 26 29 24 102 -15 85 -45 124 -53 149 -30 10 9 19 26 19 36 0 24 -26 76 -54 107 l-21 24 30 -7 c17 -4 45 -22 63 -41z" />
             </g>
           </svg>
-          <p>美しさと美味しさが一克（括）</p>
         </div>
+        <p>～ 美しさと美味しさが一克（括）～</p>
       </div>
       <div className="wave">
         <svg
@@ -126,6 +126,9 @@ export default ({ data }) => (
             </p>
           </div>
         </div>
+        <div className="link-button">
+          <Link to={`/menu/`}> 詳しいメニューはこちらへ</Link>
+        </div>
       </div>
     </section>
     <section className="photo">
@@ -138,7 +141,7 @@ export default ({ data }) => (
         />
       </figure>
     </section>
-    <section className="info">
+    <section className="food">
       <div className="container">
         <h2 className="bar">
           INFO<span>| 一克の情報</span>
@@ -148,10 +151,34 @@ export default ({ data }) => (
             <figure>
               <Img fluid={data.food.childImageSharp.fluid} alt="" />
             </figure>
-            <h3>食べ物</h3>
+            <h3>サンプル</h3>
+            <p>sample1</p>
+            <p>
+              サンプル
+              <br />
+              多種多様な食べ物をお楽しみください。
+            </p>
+          </div>
+          <div className="detail">
+            <figure>
+              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+            </figure>
+            <h3>サンプル</h3>
+            <p>sample2</p>
+            <p>
+              サンプル2
+              <br />
+              多種多様な食べ物をお楽しみください。
+            </p>
+          </div>
+          <div className="detail">
+            <figure>
+              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+            </figure>
+            <h3>sample3</h3>
             <p>FOOD</p>
             <p>
-              おすすめは「とりあし」
+              サンプル3
               <br />
               多種多様な食べ物をお楽しみください。
             </p>

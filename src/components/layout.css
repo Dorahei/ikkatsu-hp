@@ -450,17 +450,22 @@ svg {
 .shopdata {
 	display: inline;
 	color: #ddd;
-	background: radial-gradient(rgb(29, 25, 25), rgb(36, 31, 31));
+	background: dimgrey;
 	margin: 10px auto;
 	padding: 10px;
 	border-radius: 10px 20px 10px 20px;
 }
-
+.address-url{
+	padding: 48px;
+}
 .address-url span{
 	color:#f55 !important;
     text-decoration:none !important;
 }
 
+.tel-number{
+	padding: 48px;
+}
 .tel-number span{
     color:#f55 !important;
     text-decoration:none !important;

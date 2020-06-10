@@ -12,9 +12,9 @@ import {
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
+      pattern: file(relativePath: { eq: "pattern.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 50) {
+          fluid(maxWidth: 1920, quality: 70) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -115,7 +115,6 @@ export default () => {
           style={{ height: "100%" }}
         />
       </div>
-      
     </footer>
   )
 }

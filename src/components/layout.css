@@ -458,7 +458,10 @@ svg {
 .info [class*="fa-"] {
 	margin-right: 10px;
 }
-
+/* about.js内の営業日時間について */
+.biz-time span{
+	font-size:x-large;
+}
 
 /* shop情報とGoogleMapの表示 */
 .shopdata {

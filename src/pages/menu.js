@@ -33,37 +33,48 @@ export default ({ data, location }) => (
         <aside className="info">
           <div className="subtitle">
             <FontAwesomeIcon icon={faUtensils} />
-            ABOUT IKKATSU
+            一克のこだわり
           </div>
         </aside>
         <div className="postbody">
-          <p>
-            食べ物へのこだわり
-          </p>
+          <ul>
+            <li>国産鶏を使用</li>
+            <li>国産炭を使用</li>
+            <li>やきとりの写真使用</li>
+          </ul>
           <h2>
             <FontAwesomeIcon icon={faCheckSquare} />
-            お客様の目と胃袋を刺激する串焼きは必見必須！
+            お客様の目と胃袋を刺激する串焼きは必見必須！<br/>
           </h2>
-          <p>
-            これらについて、次のような記事やレシピなどを書いて公開しています。
-          </p>
-          <ul>
-            <li>ヘルシーで美味しい料理の研究・レビュー・レシピ。</li>
-            <li>一人でも、家族や友人と一緒にでも楽しめる料理。</li>
-            <li>ユーザー間のオープンなコミュニケーションを基盤とした情報。</li>
-          </ul>
+          <p>★ 日替わりの創作やきとりもあります!!</p>
+          <Img
+            fluid={data.food_menu.childImageSharp.fluid}
+            alt="一克メニュー|食べ物1"
+          />
+          <Img
+            fluid={data.food_menu2.childImageSharp.fluid}
+            alt="一克メニュー|食べ物2"
+          />
           <h2>
             <FontAwesomeIcon icon={faCheckSquare} />
             飲み物
           </h2>
-          <p>
-            よく聞かれることなのですが、私たちはスタートアップではありません。私たちはまだスタートしたばかりで、より多くの人々が食べやすい食べ物がもたらす違いを発見できるように、成長しサービスを改善する機会を待っています。
-          </p>
-          <p>気長にお付き合いいただければ幸いです。</p>
+          <Img
+            fluid={data.drink_menu.childImageSharp.fluid}
+            alt="一克メニュー|飲み物1"
+          />
+          <Img
+            fluid={data.drink_menu2.childImageSharp.fluid}
+            alt="一克メニュー|飲み物2"
+          />
           <h2>
             <FontAwesomeIcon icon={faCheckSquare} />
             お持ち帰り
           </h2>
+          <Img
+            fluid={data.takeout.childImageSharp.fluid}
+            alt="一克メニュー|持ち帰り"
+          />
           <p>
             お持ち帰りもできます。
           </p>
@@ -76,7 +87,7 @@ export default ({ data, location }) => (
 
 export const query = graphql`
   query {
-    about: file(relativePath: { eq: "ikkatsu_menu.jpg" }) {
+    about: file(relativePath: { eq: "food_sample13.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -88,5 +99,40 @@ export const query = graphql`
         }
       }
     }
+    food_menu: file(relativePath: { eq: "food_menu.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    food_menu2: file(relativePath: { eq: "food_menu2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    drink_menu: file(relativePath: { eq: "drink_menu.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    drink_menu2: file(relativePath: { eq: "drink_menu2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    takeout: file(relativePath: { eq: "takeout_menu.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
   }
 `

@@ -4,8 +4,6 @@ import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faTwitter,
-  faFacebookSquare,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
@@ -14,7 +12,14 @@ export default () => {
     query {
       pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 70) {
+          fluid(maxWidth: 1920, quality: 50) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      map: file(relativePath: { eq: "ikkatsu_parking2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 640, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -78,20 +83,9 @@ export default () => {
           </Link>
         </div>
         <ul className="sns">
+          <li>Instagram</li>
           <li>
-            <a href="https://twitter.com/">
-              <FontAwesomeIcon icon={faTwitter} />
-              <span className="sr-only">Twitter</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://facebook.com/">
-              <FontAwesomeIcon icon={faFacebookSquare} />
-              <span className="sr-only">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="http://instagram.com/">
+            <a href="http://instagram.com/yakitori.ikkatsu/">
               <FontAwesomeIcon icon={faInstagram} />
               <span className="sr-only">Instagram</span>
             </a>
@@ -100,18 +94,23 @@ export default () => {
       </div>
       <div className="container">
         <div className="shopdata">
+          <Img
+            fluid={data.map.childImageSharp.fluid}
+            alt="マップ画像"
+            style={{ height: "50%" }}
+          />
           <Link to={`https://goo.gl/maps/HiXmrxBB5eVUowvw9`} className="address-url">
             <p>住所：<span>〒911-0806 福井県勝山市本町1丁目4-4</span></p>
           </Link>
-          <Link to={`tel:+81779644469`} className="tel-number">
+          <a href={`tel:+81779644469`} className="tel-number">
             <p>電話番号：<span>0779-64-4469</span></p>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="back">
         <Img
           fluid={data.pattern.childImageSharp.fluid}
-          alt=""
+          alt="背景画像"
           style={{ height: "100%" }}
         />
       </div>

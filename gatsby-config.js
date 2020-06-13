@@ -28,13 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `~炭火焼き~ 一克`,
+        name: `-炭火串焼き串揚げ- 一克`,
         short_name: `一克`,
         start_url: `/`,
         background_color: `#eee`,
         theme_color: `colar`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/ikkatsu_icon.png`,
       },
     },
     `gatsby-plugin-offline`,

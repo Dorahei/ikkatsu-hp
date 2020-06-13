@@ -132,11 +132,11 @@ export default ({ data }) => (
       </div>
     </section>
     <section className="photo">
-      <h2 className="sr-only">店内の様子</h2>
+      <h2 className="sr-only">店内のカウンター</h2>
       <figure>
         <Img
-          fluid={data.shop.childImageSharp.fluid}
-          alt="店内の様子"
+          fluid={data.counter.childImageSharp.fluid}
+          alt="店内のカウンター"
           style={{ height: "100%" }}
         />
       </figure>
@@ -144,14 +144,14 @@ export default ({ data }) => (
     <section className="food">
       <div className="container">
         <h2 className="bar">
-          INFO<span>| 一克の情報</span>
+          INFO<span>| 一克のおすすめ</span>
         </h2>
         <div className="details">
           <div className="detail">
             <figure>
-              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+              <Img fluid={data.toriashi.childImageSharp.fluid} alt="" />
             </figure>
-            <h3>サンプル</h3>
+            <h3>とりあし</h3>
             <p>sample1</p>
             <p>
               サンプル
@@ -161,9 +161,9 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+              <Img fluid={data.yakimono.childImageSharp.fluid} alt="" />
             </figure>
-            <h3>サンプル</h3>
+            <h3>焼き物</h3>
             <p>sample2</p>
             <p>
               サンプル2
@@ -173,9 +173,9 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+              <Img fluid={data.agemono.childImageSharp.fluid} alt="" />
             </figure>
-            <h3>sample3</h3>
+            <h3>揚げ物</h3>
             <p>FOOD</p>
             <p>
               サンプル3
@@ -187,10 +187,10 @@ export default ({ data }) => (
       </div>
     </section>
     <section className="photo">
-      <h2 className="sr-only">店内の様子2</h2>
+      <h2 className="sr-only">店内の様子、焼鳥火上がってる</h2>
       <figure>
         <Img
-          fluid={data.shop.childImageSharp.fluid}
+          fluid={data.yakitori.childImageSharp.fluid}
           alt="店内の様子2"
           style={{ height: "100%" }}
         />
@@ -201,7 +201,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "food_sample5.jpg" }) {
+    hero: file(relativePath: { eq: "food_sample21.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -222,14 +222,42 @@ export const query = graphql`
         }
       }
     }
-    menu: file(relativePath: { eq: "ikkatsu_menu5.jpg" }) {
+    menu: file(relativePath: { eq: "takeout_menu.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    shop: file(relativePath: { eq: "ikkatsu_table.jpg" }) {
+    toriashi: file(relativePath: { eq: "food_sample12.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    yakimono: file(relativePath: { eq: "food_sample11.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    agemono: file(relativePath: { eq: "food_sample8.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 320) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    counter: file(relativePath: { eq: "ikkatsu_counter3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    yakitori: file(relativePath: { eq: "food_sample23.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp

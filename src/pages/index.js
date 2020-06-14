@@ -152,36 +152,18 @@ export default ({ data }) => (
               <Img fluid={data.toriashi.childImageSharp.fluid} alt="" />
             </figure>
             <h3>とりあし</h3>
-            <p>sample1</p>
-            <p>
-              サンプル
-              <br />
-              多種多様な食べ物をお楽しみください。
-            </p>
           </div>
           <div className="detail">
             <figure>
               <Img fluid={data.yakimono.childImageSharp.fluid} alt="" />
             </figure>
             <h3>焼き物</h3>
-            <p>sample2</p>
-            <p>
-              サンプル2
-              <br />
-              多種多様な食べ物をお楽しみください。
-            </p>
           </div>
           <div className="detail">
             <figure>
               <Img fluid={data.agemono.childImageSharp.fluid} alt="" />
             </figure>
             <h3>揚げ物</h3>
-            <p>FOOD</p>
-            <p>
-              サンプル3
-              <br />
-              多種多様な食べ物をお楽しみください。
-            </p>
           </div>
         </div>
       </div>

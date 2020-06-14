@@ -17,7 +17,7 @@ export default () => {
           }
         }
       }
-      map: file(relativePath: { eq: "ikkatsu_parking2.jpg" }) {
+      map: file(relativePath: { eq: "ikkatsu_map.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 640, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -83,8 +83,8 @@ export default () => {
           </Link>
         </div>
         <ul className="sns">
-          <li>Instagram</li>
           <li>
+            <span>Instagram：</span>
             <a href="http://instagram.com/yakitori.ikkatsu/">
               <FontAwesomeIcon icon={faInstagram} />
               <span className="sr-only">Instagram</span>

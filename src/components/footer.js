@@ -94,6 +94,7 @@ export default () => {
       </div>
       <div className="container">
         <div className="shopdata">
+          <p>詳細な地図はリンクをクリックしてください。</p>
           <Img
             fluid={data.map.childImageSharp.fluid}
             alt="マップ画像"

@@ -40,13 +40,12 @@ export default ({ data, location }) => (
           <ul>
             <li>国産鶏を使用</li>
             <li>国産炭を使用</li>
-            <li>やきとりの写真使用</li>
+            <li>日替わりの創作やきとりもあります!!</li>
           </ul>
           <h2>
             <FontAwesomeIcon icon={faCheckSquare} />
             お客様の目と胃袋を刺激する串焼きは必見必須！<br/>
           </h2>
-          <p>★ 日替わりの創作やきとりもあります!!</p>
           <Img
             fluid={data.food_menu.childImageSharp.fluid}
             alt="一克メニュー|食べ物1"
@@ -87,7 +86,7 @@ export default ({ data, location }) => (
 
 export const query = graphql`
   query {
-    about: file(relativePath: { eq: "food_sample13.jpg" }) {
+    about: file(relativePath: { eq: "food_sample24.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp

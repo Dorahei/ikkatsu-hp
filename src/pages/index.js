@@ -120,7 +120,7 @@ export default ({ data }) => (
             <h3>テイクアウト</h3>
             <p>TAKEOUT</p>
             <p>
-              おもちかえりもできます。
+              お持ち帰りもできます。
               <br />
               ご家族でお家で一克の味を楽しめます。
             </p>
@@ -211,7 +211,7 @@ export const query = graphql`
         }
       }
     }
-    toriashi: file(relativePath: { eq: "food_sample12.jpg" }) {
+    toriashi: file(relativePath: { eq: "food_sample25.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid_withWebp

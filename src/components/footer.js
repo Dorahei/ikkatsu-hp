@@ -17,13 +17,6 @@ export default () => {
           }
         }
       }
-      map: file(relativePath: { eq: "ikkatsu_map.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 640, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
     }
   `)
 
@@ -95,11 +88,6 @@ export default () => {
       <div className="container">
         <div className="shopdata">
           <p>詳細な地図はリンクをクリックしてください。</p>
-          <Img
-            fluid={data.map.childImageSharp.fluid}
-            alt="マップ画像"
-            style={{ height: "50%" }}
-          />
           <Link to={`https://goo.gl/maps/HiXmrxBB5eVUowvw9`} className="address-url">
             <p>住所：<span>〒911-0806 福井県勝山市本町1丁目4-4</span></p>
           </Link>

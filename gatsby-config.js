@@ -31,7 +31,7 @@ module.exports = {
         name: `-炭火串焼き串揚げ- 一克`,
         short_name: `一克`,
         start_url: `/`,
-        background_color: `#eee`,
+        background_color: `#fff`,
         theme_color: `colar`,
         display: `standalone`,
         icon: `src/images/ikkatsu_icon.png`,

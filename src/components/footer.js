@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
+  faFacebookSquare,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
@@ -25,7 +26,14 @@ export default () => {
       <div className="container">
         <div className="site">
           <Link to={`/`}>
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512px" height="128px" viewBox="0 0 10240 2560" preserveAspectRatio="xMidYMid meet">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="512px"
+              height="128px"
+              viewBox="0 0 10240 2560"
+              preserveAspectRatio="xMidYMid meet"
+            >
               <defs></defs>
               <desc>IKKATSU</desc>
               <g id="layer101" fill="#000000" stroke="none">
@@ -77,7 +85,12 @@ export default () => {
         </div>
         <ul className="sns">
           <li>
-            <span>Instagram：</span>
+            <a href="https://www.facebook.com/%E7%82%AD%E7%81%AB%E4%B8%B2%E7%84%BC%E3%81%8D%E4%B8%B2%E6%8F%9A%E3%81%92-%E4%B8%80%E5%85%8B-111725977248735">
+              <FontAwesomeIcon icon={faFacebookSquare} />
+              <span className="sr-only">Facebook</span>
+            </a>
+          </li>
+          <li>
             <a href="http://instagram.com/yakitori.ikkatsu/">
               <FontAwesomeIcon icon={faInstagram} />
               <span className="sr-only">Instagram</span>
@@ -88,11 +101,18 @@ export default () => {
       <div className="container">
         <div className="shopdata">
           <p>詳細な地図はリンクをクリックしてください。</p>
-          <Link to={`https://goo.gl/maps/HiXmrxBB5eVUowvw9`} className="address-url">
-            <p>住所：<span>〒911-0806 福井県勝山市本町1丁目4-4</span></p>
+          <Link
+            to={`https://goo.gl/maps/HiXmrxBB5eVUowvw9`}
+            className="address-url"
+          >
+            <p>
+              住所：<span>〒911-0806 福井県勝山市本町1丁目4-4</span>
+            </p>
           </Link>
           <a href={`tel:+81779644469`} className="tel-number">
-            <p>電話番号：<span>0779-64-4469</span></p>
+            <p>
+              電話番号：<span>0779-64-4469</span>
+            </p>
           </a>
         </div>
       </div>

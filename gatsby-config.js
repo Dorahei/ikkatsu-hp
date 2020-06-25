@@ -10,7 +10,7 @@ module.exports = {
     title: `一克`,
     description: ` 奥越の美味しい炭火焼き、串揚げ、串焼きのお店`,
     lang: `ja`,
-    siteUrl: `https://katsuyama-ikkatsu.netlify.app`,
+    siteUrl: `https://yakitori-ikkatsu.com`,
     locale: `ja_JP`,
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
   },

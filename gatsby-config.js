@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `一克`,
-    description: ` 奥越の美味しい炭火焼き、串揚げ、串焼きのお店`,
+    title: `-炭火串焼き串揚げ- 一克`,
+    description: ` 奥越、勝山市の美味しい炭火焼き、串揚げ、串焼きのお店。国産炭火と国産鶏を使った美味しい焼鳥。`,
     lang: `ja`,
     siteUrl: `https://yakitori-ikkatsu.com`,
     locale: `ja_JP`,

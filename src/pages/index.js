@@ -16,7 +16,7 @@ export default ({ data }) => (
         />
       </figure>
       <div className="catch">
-        <h1>炭火 串焼き 串揚げのお店</h1>
+        <h1>炭火 串焼き 串揚げの居酒屋</h1>
         <div>
           <svg
             version="1.0"
@@ -137,7 +137,7 @@ export default ({ data }) => (
       </div>
     </section>
     <section className="photo">
-      <h2 className="sr-only">店内の様子</h2>
+      <h2 className="sr-only">豊富なメニュー</h2>
       <figure>
         <Img
           fluid={data.counter.childImageSharp.fluid}
@@ -174,7 +174,7 @@ export default ({ data }) => (
       </div>
     </section>
     <section className="photo">
-      <h2 className="sr-only">こだわりの炭と鶏</h2>
+      <h2 className="sr-only">こだわりの国産炭と国産鶏</h2>
       <figure>
         <Img
           fluid={data.yakitori.childImageSharp.fluid}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://yakitori-ikkatsu.com/sitemap.xml
-Host: https://yakitori-ikkatsu.com

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{w2l6:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Bl7J"),c=a("vrFN");t.default=function(e){var t=e.location;return l.a.createElement(r.a,null,l.a.createElement(c.a,{pagetitle:" ページが見つかりません",pagepath:t.pathname}),l.a.createElement("h1",{style:{padding:"20vh 0",textAlign:"center"}},"お探しのページが見つかりませんでした"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-948ce0b775a45c8e15d0.js.map

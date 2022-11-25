@@ -7,10 +7,6 @@ var plugins = [{
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
       options: {"plugins":[],"name":"-炭火串焼き串揚げ- 一克","short_name":"一克","start_url":"/","background_color":"#fff","theme_color":"colar","display":"standalone","icon":"src/images/ikkatsu_icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"24eaee566a34621e515ef7a64342499b"},
     },{
-      name: 'gatsby-plugin-offline',
-      plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-offline/gatsby-ssr.js'),
-      options: {"plugins":[]},
-    },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
       options: {"plugins":[],"output":"/","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},

@@ -1,6 +1,6 @@
 var plugins = [{
-      name: 'gatsby-plugin-react-helmet',
-      plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
+      name: 'gatsby-plugin-image',
+      plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-manifest',
@@ -13,7 +13,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
-      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
+      options: {"plugins":[],"output":"/","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'partytown',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),

@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
-export default ({ data }) => (
+const Home = ({ data }) => (
   <Layout>
-    <SEO />
+    <Seo />
     <section className="hero">
       <figure>
-        <Img
-          fluid={data.hero.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.hero.childImageSharp.gatsbyImageData}
           alt="ikkatsu_pattern"
           style={{ height: "100%" }}
         />
@@ -96,7 +96,7 @@ export default ({ data }) => (
         <div className="details">
           <div className="detail">
             <figure>
-              <Img fluid={data.food.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.food.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>食べ物</h3>
             <p>FOOD</p>
@@ -108,7 +108,7 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.drink.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.drink.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>飲み物</h3>
             <p>DRINK</p>
@@ -120,7 +120,7 @@ export default ({ data }) => (
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.menu.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.menu.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>テイクアウト</h3>
             <p>TAKEOUT</p>
@@ -141,8 +141,8 @@ export default ({ data }) => (
     <section className="photo">
       <h2 className="sr-only">豊富なメニュー</h2>
       <figure>
-        <Img
-          fluid={data.counter.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.counter.childImageSharp.gatsbyImageData}
           alt="店内のカウンター"
           style={{ height: "100%" }}
         />
@@ -156,19 +156,19 @@ export default ({ data }) => (
         <div className="details">
           <div className="detail">
             <figure>
-              <Img fluid={data.toriashi.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.toriashi.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>とりあし</h3>
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.yakimono.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.yakimono.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>焼き物</h3>
           </div>
           <div className="detail">
             <figure>
-              <Img fluid={data.agemono.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.agemono.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h3>揚げ物</h3>
           </div>
@@ -178,8 +178,8 @@ export default ({ data }) => (
     <section className="photo">
       <h2 className="sr-only">こだわりの国産炭と国産鶏</h2>
       <figure>
-        <Img
-          fluid={data.yakitori.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.yakitori.childImageSharp.gatsbyImageData}
           alt="焼鳥を焼く様子"
           style={{ height: "100%" }}
         />
@@ -188,69 +188,53 @@ export default ({ data }) => (
   </Layout>
 )
 
+export default Home
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "food_sample21.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     food: file(relativePath: { eq: "food_sample7.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     drink: file(relativePath: { eq: "drink_sample.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     menu: file(relativePath: { eq: "takeout_menu.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     toriashi: file(relativePath: { eq: "food_sample25.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     yakimono: file(relativePath: { eq: "food_sample11.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     agemono: file(relativePath: { eq: "food_sample8.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 320) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(width: 320, layout: CONSTRAINED)
       }
     }
     counter: file(relativePath: { eq: "ikkatsu_counter3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     yakitori: file(relativePath: { eq: "food_sample23.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

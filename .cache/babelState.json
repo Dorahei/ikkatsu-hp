@@ -7,6 +7,12 @@
           "options": {}
         },
         {
+          "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\gatsby-plugin-image\\dist\\babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\.cache\\caches\\gatsby-plugin-image"
+          }
+        },
+        {
           "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
@@ -40,6 +46,12 @@
         {
           "name": "babel-plugin-lodash",
           "options": {}
+        },
+        {
+          "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\gatsby-plugin-image\\dist\\babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\.cache\\caches\\gatsby-plugin-image"
+          }
         },
         {
           "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
@@ -77,6 +89,12 @@
           "options": {}
         },
         {
+          "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\gatsby-plugin-image\\dist\\babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\.cache\\caches\\gatsby-plugin-image"
+          }
+        },
+        {
           "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
@@ -112,6 +130,12 @@
           "options": {}
         },
         {
+          "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\gatsby-plugin-image\\dist\\babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\.cache\\caches\\gatsby-plugin-image"
+          }
+        },
+        {
           "name": "D:\\Study_prog\\gatsby\\ikkatsu-hp\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
           "options": {}
         },
@@ -142,7 +166,7 @@
     }
   },
   "browserslist": [
-    ">0.25%",
-    "not dead"
+    ">0.25% and supports es6-module",
+    "not dead and supports es6-module"
   ]
 }

@@ -1,17 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUtensils, faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
-export default ({ data, location }) => (
+const Mene = ({data, location}) => (
   <Layout>
-    <SEO
+    <Seo
       pagetitle="メニュー"
       pagedesc="一克お品書き"
       pagepath={location.pathname}
@@ -21,8 +21,8 @@ export default ({ data, location }) => (
     />
     <div className="eyecatch">
       <figure>
-        <Img
-          fluid={data.about.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.about.childImageSharp.gatsbyImageData}
           alt="一克メニュー"
         />
       </figure>
@@ -46,36 +46,36 @@ export default ({ data, location }) => (
             <FontAwesomeIcon icon={faCheckSquare} />
             お客様の目と胃袋を刺激する串焼きは必見必須！<br/>
           </h2>
-          <Img
-            fluid={data.food_menu.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.food_menu.childImageSharp.gatsbyImageData}
             alt="一克メニュー|食べ物1"
           />
-          <Img
-            fluid={data.food_menu2.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.food_menu2.childImageSharp.gatsbyImageData}
             alt="一克メニュー|食べ物2"
           />
           <h2>
-            <FontAwesomeIcon icon={faCheckSquare} />
+          <FontAwesomeIcon icon={faCheckSquare} />
             飲み物
           </h2>
-          <Img
-            fluid={data.drink_menu.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.drink_menu.childImageSharp.gatsbyImageData}
             alt="一克メニュー|飲み物1"
           />
-          <Img
-            fluid={data.drink_menu2.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.drink_menu2.childImageSharp.gatsbyImageData}
             alt="一克メニュー|飲み物2"
           />
           <h2>
-            <FontAwesomeIcon icon={faCheckSquare} />
+          <FontAwesomeIcon icon={faCheckSquare} />
             お持ち帰り
           </h2>
-          <Img
-            fluid={data.takeout.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.takeout.childImageSharp.gatsbyImageData}
             alt="一克メニュー|持ち帰り"
           />
-          <Img
-            fluid={data.takeout_sample.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.takeout_sample.childImageSharp.gatsbyImageData}
             alt="持ち帰りサンプル"
           />
           <p>お持ち帰りもできます。</p>
@@ -87,13 +87,13 @@ export default ({ data, location }) => (
   </Layout>
 )
 
+export default Mene
+
 export const query = graphql`
   query {
     about: file(relativePath: { eq: "food_sample24.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
         original {
           src
           height
@@ -102,46 +102,34 @@ export const query = graphql`
       }
     }
     food_menu: file(relativePath: { eq: "food_menu.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
     food_menu2: file(relativePath: { eq: "food_menu2.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
     drink_menu: file(relativePath: { eq: "drink_menu.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
     drink_menu2: file(relativePath: { eq: "drink_menu2.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
     takeout: file(relativePath: { eq: "takeout_menu.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
     takeout_sample: file(relativePath: { eq: "takeout_sample.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
+      childImageSharp {
+        gatsbyImageData(width: 800, layout: CONSTRAINED)
       }
+    }
   }
 `

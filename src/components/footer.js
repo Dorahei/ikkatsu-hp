@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -8,14 +8,12 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 
-export default () => {
+const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       pattern: file(relativePath: { eq: "ikkatsu_pattern.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 50) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
@@ -117,8 +115,8 @@ export default () => {
         </div>
       </div>
       <div className="back">
-        <Img
-          fluid={data.pattern.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.pattern.childImageSharp.gatsbyImageData}
           alt="背景画像"
           style={{ height: "100%" }}
         />
@@ -126,3 +124,5 @@ export default () => {
     </footer>
   )
 }
+
+export default Footer

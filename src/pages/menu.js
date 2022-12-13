@@ -9,16 +9,16 @@ import { faUtensils, faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 
 import Seo from "../components/seo"
 
-const Mene = ({data, location}) => (
+const Mene = ({data}) => (
   <Layout>
-    <Seo
+    {/* <Seo
       pagetitle="メニュー"
       pagedesc="一克お品書き"
       pagepath={location.pathname}
       pageimg={data.about.childImageSharp.original.src}
       pageimgw={data.about.childImageSharp.original.width}
       pageimgh={data.about.childImageSharp.original.height}
-    />
+    /> */}
     <div className="eyecatch">
       <figure>
         <GatsbyImage
@@ -133,3 +133,14 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ location, data }) => (
+    <Seo
+      pagetitle="メニュー"
+      pagedesc="一克お品書き"
+      pagepath={location.pathname}
+      pageimg={data.about.childImageSharp.original.src}
+      pageimgw={data.about.childImageSharp.original.width}
+      pageimgh={data.about.childImageSharp.original.height}
+  />
+ )

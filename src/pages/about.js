@@ -11,14 +11,14 @@ import Seo from "../components/seo"
 
 const About = ({ data, location}) => (
   <Layout>
-    <Seo
+    {/* <Seo
       pagetitle="一克 について"
       pagedesc="勝山の炭火 串焼き 串揚げのお店"
       pagepath={location.pathname}
       pageimg={data.about.childImageSharp.original.src}
       pageimgw={data.about.childImageSharp.original.width}
       pageimgh={data.about.childImageSharp.original.height}
-    />
+    /> */}
     <div className="eyecatch">
       <figure>
         <GatsbyImage
@@ -108,3 +108,14 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ location, data }) => (
+    <Seo
+      pagetitle="一克 について"
+      pagedesc="勝山の炭火 串焼き 串揚げのお店"
+      pagepath={location.pathname}
+      pageimg={data.about.childImageSharp.original.src}
+      pageimgw={data.about.childImageSharp.original.width}
+      pageimgh={data.about.childImageSharp.original.height}
+    />
+ )

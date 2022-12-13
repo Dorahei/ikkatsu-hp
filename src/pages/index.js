@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 const Home = ({ data }) => (
   <Layout>
-    <Seo />
+    {/* <Seo /> */}
     <section className="hero">
       <figure>
         <GatsbyImage
@@ -239,3 +239,6 @@ export const query = graphql`
     }
   }
 `
+export const Head = () => (
+     <Seo />
+ )

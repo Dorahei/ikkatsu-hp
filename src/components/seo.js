@@ -34,45 +34,55 @@ const Seo = props => {
   const imgh = props.pageimgh || 640
 
   return (
-    <Head
-      title={title}
-      description={description}
-      url={url}
-      imgurl={imgurl}
-      imgw={imgw}
-      imgh={imgh}
-      lang={data.site.siteMetadata.lang}
-      site_name={data.site.siteMetadata.title}
-      locale={data.site.siteMetadata.locale}
-      fbappid={data.site.siteMetadata.fbappid}
-    />
+    <>
+      <html lang={data.lang} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+
+      <link rel="canonical" href={url} />
+
+      <meta property="og:site_name" content={title} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content={data.locale} />
+      <meta property="fb:app_id" content={data.fbappid} />
+
+      <meta property="og:image" content={imgurl} />
+      <meta property="og:image:width" content={imgw} />
+      <meta property="og:image:height" content={imgh} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+
+     </>
   )
 }
 export default Seo
 
  // この部分 Gatsby Head APIはHead関数内に記載する
-export const Head = (seo_data) => {
-  return (
-    <>
-      <html lang={seo_data.lang} />
-      <title>{seo_data.title}</title>
-      <meta name="description" content={seo_data.description} />
+// export const Head = (data) => {
+//   return (
+//     <>
+//       <html lang={data.lang} />
+//       <title>{data.title}</title>
+//       <meta name="description" content={data.description} />
 
-      <link rel="canonical" href={seo_data.url} />
+//       <link rel="canonical" href={data.url} />
 
-      <meta property="og:site_name" content={seo_data.title} />
-      <meta property="og:title" content={seo_data.title} />
-      <meta property="og:description" content={seo_data.description} />
-      <meta property="og:url" content={seo_data.url} />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content={seo_data.locale} />
-      <meta property="fb:app_id" content={seo_data.fbappid} />
+//       <meta property="og:site_name" content={data.title} />
+//       <meta property="og:title" content={data.title} />
+//       <meta property="og:description" content={data.description} />
+//       <meta property="og:url" content={data.url} />
+//       <meta property="og:type" content="website" />
+//       <meta property="og:locale" content={data.locale} />
+//       <meta property="fb:app_id" content={data.fbappid} />
 
-      <meta property="og:image" content={seo_data.imgurl} />
-      <meta property="og:image:width" content={seo_data.imgw} />
-      <meta property="og:image:height" content={seo_data.imgh} />
+//       <meta property="og:image" content={data.imgurl} />
+//       <meta property="og:image:width" content={data.imgw} />
+//       <meta property="og:image:height" content={data.imgh} />
 
-      <meta name="twitter:card" content="summary_large_image" />
-    </>
-  )
-}
+//       <meta name="twitter:card" content="summary_large_image" />
+//     </>
+//   )
+// }

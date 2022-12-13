@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const NotFound = ({ location }) => (
   <Layout>
-    <Seo pagetitle="ページが見つかりません" pagepath={location.pathname} />
+    {/* <Seo pagetitle="ページが見つかりません" pagepath={location.pathname} /> */}
     <h1 style={{ padding: "20vh 0", textAlign: "center" }}>
       お探しのページが見つかりませんでした
     </h1>
@@ -13,3 +13,7 @@ const NotFound = ({ location }) => (
 )
 
 export default NotFound
+
+export const Head = ({ location }) => (
+     <Seo pagetitle="ページが見つかりません" pagepath={location.pathname} />
+ )

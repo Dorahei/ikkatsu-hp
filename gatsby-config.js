@@ -47,8 +47,8 @@ module.exports = {
         icon: `src/images/ikkatsu_icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    // `gatsby-plugin-offline`,
   ],
 }

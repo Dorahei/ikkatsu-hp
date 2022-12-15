@@ -41,7 +41,7 @@ module.exports = {
         name: `-炭火串焼き串揚げ- 一克`,
         short_name: `一克`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#ffffff`,
         theme_color: `colar`,
         display: `standalone`,
         icon: `src/images/ikkatsu_icon.png`,
@@ -49,6 +49,6 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

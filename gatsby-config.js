@@ -56,13 +56,13 @@ module.exports = {
         excludes: [`/dev-404-page`,`/404`,`/404.html`,`/offline-plugin-app-shell-fallback`],
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      // options: {
-      //     workboxConfig: {
-      //       globPatterns: ['src/images/ikkatsu_icon.png']
-      //     }
-      // }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-offline',
+    //   options: {
+    //       workboxConfig: {
+    //         globPatterns: ['src/images/ikkatsu_icon.png']
+    //       }
+    //   }
+    // },
   ],
 }

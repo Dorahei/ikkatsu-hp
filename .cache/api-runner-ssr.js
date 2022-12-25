@@ -15,10 +15,6 @@ var plugins = [{
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
       options: {"plugins":[],"excludes":["/dev-404-page","/404","/404.html","/offline-plugin-app-shell-fallback"],"output":"/","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }"},
     },{
-      name: 'gatsby-plugin-offline',
-      plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-offline/gatsby-ssr.js'),
-      options: {"plugins":[]},
-    },{
       name: 'partytown',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},

@@ -7,13 +7,17 @@ var plugins = [{
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-google-gtag/gatsby-ssr.js'),
       options: {"plugins":[],"trackingIds":["G-X2SSLXXLKB"],"pluginConfig":{"head":true}},
     },{
+      name: 'gatsby-plugin-manifest',
+      plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
+      options: {"plugins":[],"name":"-炭火串焼き串揚げ- 一克","short_name":"一克","start_url":"/","background_color":"#ffffff","theme_color":"colar","display":"standalone","icon":"src/images/ikkatsu_icon.png","cache_busting_mode":"none","legacy":true,"theme_color_in_head":true,"crossOrigin":"anonymous","include_favicon":true,"cacheDigest":null},
+    },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
       options: {"plugins":[],"output":"/","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'gatsby-plugin-offline',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-offline/gatsby-ssr.js'),
-      options: {"plugins":[]},
+      options: {"plugins":[],"workboxConfig":{"globPatterns":["src/images/ikkatsu_icon.png"]}},
     },{
       name: 'partytown',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),

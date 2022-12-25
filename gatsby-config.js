@@ -35,20 +35,28 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `-炭火串焼き串揚げ- 一克`,
-    //     short_name: `一克`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `colar`,
-    //     display: `standalone`,
-    //     icon: `src/images/ikkatsu_icon.png`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `-炭火串焼き串揚げ- 一克`,
+        short_name: `一克`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `colar`,
+        display: `standalone`,
+        icon: `src/images/ikkatsu_icon.png`,
+        cache_busting_mode: 'none'
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+          workboxConfig: {
+            globPatterns: ['src/images/ikkatsu_icon.png']
+          }
+      }
+    },
   ],
 }

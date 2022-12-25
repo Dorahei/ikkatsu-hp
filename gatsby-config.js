@@ -49,13 +49,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-robots-txt`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        //除外したいページを指定する。「*」でワイルドカードも使える。
-        excludes: [`/dev-404-page`,`/404`,`/404.html`,`/offline-plugin-app-shell-fallback`],
-      },
-    },
+    `gatsby-plugin-sitemap`,
     // {
     //   resolve: 'gatsby-plugin-offline',
     //   options: {

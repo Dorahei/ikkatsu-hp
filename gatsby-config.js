@@ -48,15 +48,21 @@ module.exports = {
         cache_busting_mode: 'none'
       },
     },
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
     {
-      resolve: 'gatsby-plugin-offline',
+      resolve: `gatsby-plugin-sitemap`,
       options: {
-          workboxConfig: {
-            globPatterns: ['src/images/ikkatsu_icon.png']
-          }
-      }
+        //除外したいページを指定する。「*」でワイルドカードも使える。
+        excludes: [`/dev-404-page`,`/404`,`/404.html`,`/offline-plugin-app-shell-fallback`],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      // options: {
+      //     workboxConfig: {
+      //       globPatterns: ['src/images/ikkatsu_icon.png']
+      //     }
+      // }
     },
   ],
 }

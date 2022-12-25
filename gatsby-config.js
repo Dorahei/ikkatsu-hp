@@ -50,13 +50,7 @@ module.exports = {
     },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: 'gatsby-plugin-offline',
-    //   options: {
-    //       workboxConfig: {
-    //         globPatterns: ['src/images/ikkatsu_icon.png']
-    //       }
-    //   }
-    // },
+    //'gatsby-plugin-offline',
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }

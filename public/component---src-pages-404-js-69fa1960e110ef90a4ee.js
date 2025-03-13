@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkikkatsu_hp_gatsby=self.webpackChunkikkatsu_hp_gatsby||[]).push([[125],{3331:function(e,t,a){a.r(t),a.d(t,{Head:function(){return u}});var n=a(6540),l=a(15),r=a(7528);t.default=e=>{let{location:t}=e;return n.createElement(l.A,null,n.createElement("h1",{style:{padding:"20vh 0",textAlign:"center"}},"お探しのページが見つかりませんでした"))};const u=e=>{let{location:t}=e;return n.createElement(r.A,{pagetitle:"ページが見つかりません",pagepath:t.pathname})}}}]);
+//# sourceMappingURL=component---src-pages-404-js-69fa1960e110ef90a4ee.js.map

@@ -5,7 +5,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-google-gtag',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-google-gtag/gatsby-ssr.js'),
-      options: {"plugins":[],"trackingIds":["G-X2SSLXXLKB"],"pluginConfig":{"head":true}},
+      options: {"plugins":[],"trackingIds":["G-X2SSLXXLKB"],"pluginConfig":{"head":true,"respectDNT":false,"exclude":[],"origin":"https://www.googletagmanager.com","delayOnRouteUpdate":0},"gtagConfig":{}},
     },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('D:/Study_prog/gatsby/ikkatsu-hp/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),

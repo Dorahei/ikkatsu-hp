@@ -1,7 +1,17 @@
 exports.components = {
-  "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
-  "component---src-pages-about-js": () => import("./../../../src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
-  "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-menu-js": () => import("./../../../src/pages/menu.js" /* webpackChunkName: "component---src-pages-menu-js" */)
+  "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js?export=default" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---src-pages-404-js": () => import("./../../../src/pages/404.js?export=default" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-about-js": () => import("./../../../src/pages/about.js?export=default" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-index-js": () => import("./../../../src/pages/index.js?export=default" /* webpackChunkName: "component---src-pages-index-js" */),
+  "component---src-pages-menu-js": () => import("./../../../src/pages/menu.js?export=default" /* webpackChunkName: "component---src-pages-menu-js" */)
+}
+
+
+
+exports.head = {
+  "component---src-pages-404-js": () => import("./../../../src/pages/404.js?export=head" /* webpackChunkName: "component---src-pages-404-jshead" */),
+  "component---src-pages-about-js": () => import("./../../../src/pages/about.js?export=head" /* webpackChunkName: "component---src-pages-about-jshead" */),
+  "component---src-pages-index-js": () => import("./../../../src/pages/index.js?export=head" /* webpackChunkName: "component---src-pages-index-jshead" */),
+  "component---src-pages-menu-js": () => import("./../../../src/pages/menu.js?export=head" /* webpackChunkName: "component---src-pages-menu-jshead" */)
 }
 
